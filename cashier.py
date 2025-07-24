@@ -31,7 +31,7 @@ from livekit.agents import (
     function_tool,
     RoomInputOptions,
 )
-from livekit.plugins import cartesia, deepgram, openai, silero,noise_cancellation
+from livekit.plugins import cartesia, deepgram, openai, silero
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from openai.types.beta.realtime.session import TurnDetection
 
