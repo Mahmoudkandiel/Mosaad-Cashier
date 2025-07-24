@@ -32,7 +32,6 @@ from livekit.agents import (
     RoomInputOptions,
 )
 from livekit.plugins import cartesia, deepgram, openai, silero
-from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from openai.types.beta.realtime.session import TurnDetection
 
 load_dotenv()
