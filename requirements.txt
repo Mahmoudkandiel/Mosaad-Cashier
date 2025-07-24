@@ -10,6 +10,5 @@ livekit-plugins-cartesia
 livekit-plugins-deepgram
 livekit-plugins-openai
 livekit-plugins-silero
-livekit-plugins-rnnoise
 livekit-plugins-vad  
 livekit-plugins-noise-cancellation~=0.2
