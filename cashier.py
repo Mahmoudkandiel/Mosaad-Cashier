@@ -4,7 +4,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from dataclasses import dataclass
-from typing import Annotated, Literal
+from typing import Annotated
 
 from database import (
     COMMON_INSTRUCTIONS,
@@ -29,9 +29,9 @@ from livekit.agents import (
     WorkerOptions,
     cli,
     function_tool,
-    RoomInputOptions,
+    # RoomInputOptions,
 )
-from livekit.plugins import cartesia, deepgram, openai, silero
+from livekit.plugins import  openai
 from openai.types.beta.realtime.session import TurnDetection
 
 load_dotenv()
@@ -259,12 +259,12 @@ async def entrypoint(ctx: JobContext):
     await session.start(
         agent=DriveThruAgent(userdata=userdata), 
         room=ctx.room,
-        room_input_options=RoomInputOptions(
-            # LiveKit Cloud enhanced noise cancellation
-            # - If self-hosting, omit this parameter
-            # - For telephony applications, use `BVCTelephony` for best results
-            noise_cancellation=noise_cancellation.BVC(),
-        ),
+        # room_input_options=RoomInputOptions(
+        #     # LiveKit Cloud enhanced noise cancellation
+        #     # - If self-hosting, omit this parameter
+        #     # - For telephony applications, use `BVCTelephony` for best results
+        #     noise_cancellation=noise_cancellation.BVC(),
+        # ),
     )
     await background_audio.start(room=ctx.room, agent_session=session)
 

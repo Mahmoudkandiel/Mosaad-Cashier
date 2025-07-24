@@ -4,11 +4,11 @@ python-dotenv
 # LiveKit agent framework with required plugins for TTS, STT, and LLMs
 # This single line installs the core agent library and pulls in dependencies
 # like pydantic, openai, deepgram-sdk, etc., for the specified plugins.
-livekit-agents[cartesia,deepgram,openai,silero]
-livekit
-livekit-plugins-cartesia
-livekit-plugins-deepgram
+livekit-agents#[cartesia,deepgram,openai,silero]
+# livekit
+# livekit-plugins-cartesia
+# livekit-plugins-deepgram
 livekit-plugins-openai
-livekit-plugins-silero
+# livekit-plugins-silero
 livekit-plugins-vad  
-livekit-plugins-noise-cancellation~=0.2
+# livekit-plugins-noise-cancellation~=0.2
